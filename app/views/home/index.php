@@ -1,3 +1,4 @@
+<?php if (empty($data['user'][0]['img'])) $data['user'][0]['img']='noImage.jpg';?>
 <body>
 <div class="auth">
     <div class="fl">

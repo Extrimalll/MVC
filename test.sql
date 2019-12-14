@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 04 2019 г., 19:48
+-- Время создания: Дек 14 2019 г., 08:37
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -32,7 +32,6 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `login` varchar(25) NOT NULL,
   `password` varchar(256) NOT NULL,
-  `salt` varchar(8) NOT NULL,
   `username` text NOT NULL,
   `family` text NOT NULL,
   `age` int(3) NOT NULL,
@@ -43,9 +42,8 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `login`, `password`, `salt`, `username`, `family`, `age`, `img`) VALUES
-(25, 'testtest3', '444cd81f15ea0fbe919c2f81ac5b432a', 'ifo2SSFN', 'sd', 'sd', 23, 'E7000001007850350.png'),
-(27, 'testtest', '3d3c88a04bb4a89bbf72bbca58f43bd2', 'm6Si8N31', 'Vladislav', 'Yasyrev', 23, '1494592816133830021.jpg');
+INSERT INTO `users` (`id`, `login`, `password`, `username`, `family`, `age`, `img`) VALUES
+(1, 'testtest', '$2y$15$M3TsrfZiRaZpnSzmx5UFDOEgdpGiK.LxI.8A3OiUCzo15D5NpJTOq', 'Vladislav', 'Yasyrev', 23, '1494592816133830021.jpg');
 
 --
 -- Индексы сохранённых таблиц
@@ -65,7 +63,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
